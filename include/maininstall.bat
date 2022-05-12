@@ -15,3 +15,6 @@ call %~dp0\chocoinstall.bat
 title Installing Choco: [=========]
 title Installing Anim-DL: [---------]
 call %~dp0\restinstall.bat
+
+:exit
+pause
