@@ -14,4 +14,4 @@ title Installing Choco: [---------]
 call %~dp0\chocoinstall.bat
 title Installing Choco: [=========]
 title Installing Anim-DL: [---------]
-start /B "Installing Anim-DL: [---------]" %~dp0\restinstall.bat
+call %~dp0\restinstall.bat
