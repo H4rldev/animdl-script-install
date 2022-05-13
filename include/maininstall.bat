@@ -13,7 +13,7 @@ type %~dp0\logo.txt
 title Installing Choco: [---------]
 call %~dp0\chocoinstall.bat
 title Installing Choco: [=========]
-title Installing Anim-DL: [---------]
+title Cloning: [---------]
 call %~dp0\restinstall.bat
 
 :exit
