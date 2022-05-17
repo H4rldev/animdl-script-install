@@ -17,3 +17,4 @@ if exist "%~dp0\install" (
 )
 
 :init
+echo mogus
