@@ -4,7 +4,7 @@ title Anim-DL Downloader :)
 
 :checkforinstallfiles
 if exist "%~dp0\install" (
-   del /F /Q "%~dp0\install\*"
+   rd /S /Q "%~dp0\install\"
    if exist "%~dp0\install.bat" (
       del /F /Q "%~dp0\install.bat"
       goto init
@@ -17,4 +17,4 @@ if exist "%~dp0\install" (
 )
 
 :init
-echo mogus
+echo among
