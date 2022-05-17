@@ -3,8 +3,8 @@ type %~dp0\logo.txt
 title Anim-DL Downloader :)
 
 :checkforinstallfiles
-if exist "%~dp0\include" "%~dp0\install.bat" (
-   del /F /Q "%~dp0\include\*"
+if exist "%~dp0\install" (
+   del /F /Q "%~dp0\install\*"
    if exist "%~dp0\install.bat" (
       del /F /Q "%~dp0\install.bat"
       goto init
@@ -17,4 +17,3 @@ if exist "%~dp0\include" "%~dp0\install.bat" (
 )
 
 :init
-del /F /Q %~dp0\install.bat
