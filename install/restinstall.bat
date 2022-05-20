@@ -2,7 +2,7 @@
 title Cloning: [---------]
 
 :checkpython
-if exist "C:\e" (
+if exist "C:\Python39\" (
    echo Python already installed [possibly]
    goto checkmpv
 ) else (
