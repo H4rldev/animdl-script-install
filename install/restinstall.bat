@@ -1,11 +1,8 @@
 @echo off
 title Cloning: [---------]
 
-
-
-
 :checkpython
-if exist "C:\Python39\Scripts" (
+if exist "C:\e" (
    echo Python already installed [possibly]
    goto checkmpv
 ) else (
@@ -34,6 +31,7 @@ goto checkanimdl
 
 :installpython
 choco install python
+setx /M PATH "%PATH%;%USERPROFILE%\AppData\Roaming\Python\Python39\Scripts"
 goto checkmpv
 
 :installinganimdl
