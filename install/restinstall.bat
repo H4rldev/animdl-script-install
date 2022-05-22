@@ -36,7 +36,7 @@ goto checkmpv
 
 :installinganimdl
 title Installing Anim-DL: [=====----]
-refreshenv && pip install animdl && title Installing Anim-DL: [=========]
+refreshenv && python -m pip install git+https://www.github.com/justfoolingaround/animdl && title Installing Anim-DL: [=========]
 
 
 :mogus
