@@ -26,4 +26,4 @@ if %errorLevel% == 0 (
 :install
 del /F /Q uninstall.bat
 del /F /Q update.bat
-start /B "Installer" %~dp0\include\maininstall.bat
+start /B "Installer" %~dp0\install\maininstall.bat
