@@ -2,7 +2,7 @@
 title Installer
 type %~dp0\logo.txt
 :init
-IF EXIST "%~dp0\include" (
+IF EXIST "%~dp0\install" (
    echo Requirement of installation [[32mTRUE[0m]
    pause
    cls
@@ -24,4 +24,6 @@ if %errorLevel% == 0 (
   )
 
 :install
+del /F /Q uninstall.bat
+del /F /Q update.bat
 start /B "Installer" %~dp0\include\maininstall.bat
