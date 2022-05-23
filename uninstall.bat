@@ -20,4 +20,5 @@ cls
 del /F /Q logo.txt
 del /F /Q credits.txt
 pause
+cmd /c del /F /Q uninstall.bat
 exit
