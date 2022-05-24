@@ -1,8 +1,8 @@
 if exist "%ALLUSERSPROFILE%\chocolatey\bin" (
    echo Already installed continuing.
-   goto amongus
+   goto :amongus
 ) else (
-   goto install
+   goto :install
 )
 
 :install

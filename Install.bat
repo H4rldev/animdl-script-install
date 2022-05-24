@@ -9,7 +9,7 @@ IF EXIST "%~dp0\install" (
    cls
    type %~dp0\logo.txt
    type %~dp0\credits.txt
-   goto check_Permissions
+   goto :check_Permissions
 ) ELSE (
    echo Requirement of installation [[31mFALSE[0m]
    pause
@@ -19,7 +19,7 @@ IF EXIST "%~dp0\install" (
 :check_Permissions    
 net session >nul 2>&1
 if %errorLevel% == 0 (
-   goto install
+   goto :install
 ) else (
      echo Please run this as an Administrator. && pause
      exit
