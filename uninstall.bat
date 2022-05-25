@@ -20,5 +20,5 @@ cls
 del /F /Q logo.txt
 del /F /Q credits.txt
 pause
-start "yes" "cmd /K del /F /Q %~dp0\uninstall.bat %% exit"
+start "yes" "cmd /K del /F /Q %~dp0\uninstall.bat && exit"
 exit

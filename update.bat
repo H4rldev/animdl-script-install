@@ -16,7 +16,7 @@ choco install python
 choco install mpv
 python -m pip install -U git+https://www.github.com/justfoolingaround/animdl
 del /F /Q Downloader.bat
-powershell.exe -c "invoke-webrequest 'https://raw.githubusercontent.com/H4rldev/animdl-batch-script/master/Downloader.bat' -outfile .\Downloader.bat"
+powershell.exe -c "invoke-webrequest 'https://raw.githubusercontent.com/H4rldev/animdl-batch-script/master/Downloader.bat' -outfile %~dp0\Downloader.bat"
 goto leave
 
 :leave
@@ -26,5 +26,5 @@ type %~dp0\credits.txt
 echo Update should be done now.
 echo Thanks for using my batch script :]
 pause
-start "yes" "cmd /K del /F /Q %~dp0\update.bat %% exit"
+start "yes" "cmd /K del /F /Q %~dp0\update.bat && exit"
 exit
