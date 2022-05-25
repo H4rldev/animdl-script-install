@@ -1,0 +1,10 @@
+default_player: mpv
+discord_presence: true
+ffmpeg:
+    executable: ffmpeg
+    hls_download: false
+    submerge: true
+fzf:
+    executable: fzf
+    opts: []
+    state: false

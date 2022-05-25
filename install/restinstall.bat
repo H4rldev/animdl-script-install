@@ -20,7 +20,7 @@ if exist "C:\ProgramData\chocolatey\lib\mpv.install" (
 :checkanimdl
 if exist "C:\Python39\Scripts\animdl.exe" (
    echo anim-dl already installed. [most likely]
-   goto :mogus
+   goto :checkffmpeg
 ) else (
    goto :installinganimdl
 )
@@ -34,9 +34,22 @@ choco install python
 setx /M PATH "%PATH%;%USERPROFILE%\AppData\Roaming\Python\Python39\Scripts"
 goto :checkmpv
 
+:installffmpeg
+choco install ffmpeg
+goto :mogus
+
 :installinganimdl
 title Installing Anim-DL: [=====----]
 refreshenv && python -m pip install git+https://www.github.com/justfoolingaround/animdl && title Installing Anim-DL: [=========]
+goto :checkffmpeg
 
+
+:checkffmpeg
+if exist "C:\ProgramData\chocolatey\lib\ffmpeg\tools\ffmpeg\bin" (
+   echo ffmpeg already installed. [most likely]
+   goto :mogus
+) else (
+   goto :installffmpeg
+)
 
 :mogus
