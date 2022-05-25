@@ -26,5 +26,5 @@ type %~dp0\credits.txt
 echo Update should be done now.
 echo Thanks for using my batch script :]
 pause
-start /B "yes" "cmd /K del /F /Q %~dp0\update.bat && exit"
+start /B "yes" "cmd /C del /F /Q %~dp0\update.bat && exit"
 exit
