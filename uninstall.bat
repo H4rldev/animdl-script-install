@@ -15,7 +15,7 @@ goto uninstall2
 cls 
 type %~dp0\logo.txt
 type %~dp0\credits.txt
-echo <nimdl and the batch script should now be gone. Goodbye
+echo animdl and the batch script should now be gone. Goodbye
 cls
 del /F /Q logo.txt
 del /F /Q credits.txt

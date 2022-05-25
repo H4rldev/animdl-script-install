@@ -14,7 +14,7 @@ if %errorLevel% == 0 (
 :update
 choco install python
 choco install mpv
-refreshenv && python -m pip install -U git+https://www.github.com/justfoolingaround/animdl
+python -m pip install -U git+https://www.github.com/justfoolingaround/animdl
 del /F /Q Downloader.bat
 powershell.exe -c "invoke-webrequest 'https://raw.githubusercontent.com/H4rldev/animdl-batch-script/master/Downloader.bat' -outfile .\Downloader.bat"
 goto leave
@@ -23,11 +23,8 @@ goto leave
 cls
 type %~dp0\logo.txt
 type %~dp0\credits.txt
-
 echo Update should be done now.
 echo Thanks for using my batch script :]
 pause
 start "yes" "cmd /K del /F /Q %~dp0\update.bat %% exit"
 exit
-
-
