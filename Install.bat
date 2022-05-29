@@ -29,5 +29,6 @@ if %errorLevel% == 0 (
 del /F /Q "%~dp0\uninstall.bat"
 del /F /Q "%~dp0\update.bat"
 del /F /Q "%~dp0\config.yml"
+cls
 powershell.exe -c "invoke-webrequest 'https://raw.githubusercontent.com/H4rldev/animdl-batch-script/master/Downloader.bat' -outfile %~dp0\Downloader.bat"
 start /B "Installer" %~dp0\install\maininstall.bat
