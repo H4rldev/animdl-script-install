@@ -15,7 +15,6 @@ if %errorLevel% == 0 (
 choco install python
 choco install mpv
 python -m pip install -U git+https://www.github.com/justfoolingaround/animdl
-del /F /Q %~dp0\Downloader.bat
 powershell.exe -c "invoke-webrequest 'https://raw.githubusercontent.com/H4rldev/animdl-batch-script-install-files/master/replacedownloader.bat' -outfile %~dp0\replacedownloader.bat"
 goto leave
 
@@ -27,4 +26,5 @@ echo Update should be done now.
 echo Thanks for using my batch script :]
 pause
 start /B "yes" "%~dp0\replacedownloader.bat"
+start /B "yes" "cmd /C del /F /Q %~dp0\update.bat && exit"
 exit
